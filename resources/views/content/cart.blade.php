@@ -243,7 +243,13 @@
                 <h1 class="modal-title fs-5 fw-bold" id="staticBackdropLabel">Thankyou!</h1>
             </div>
             <div class="modal-body">
-                Hope you enjoy the experience with Sky Universe!
+                <div class="col d-flex justify-content-center flex-column align-items-center">
+                    <p class="fw-bold">CHECKOUT SUCCESS</p>
+                    <h1 style="font-size: 10rem;">
+                        <i class="bi bi-patch-check-fill text-success"></i>
+                    </h1>
+                    Hope you enjoy the experience with Sky Universe!
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary bg-pink text-white" data-bs-dismiss="modal">Back to home</button>

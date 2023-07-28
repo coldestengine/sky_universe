@@ -87,7 +87,8 @@ socket.on('resetGame', (user) => {
     turn = 'X';
     board = ['', '', '', '', '', '', '', '', ''];
     renderBoard();
-    document.getElementById('message').innerHTML = 'Game reset! another player has left the game, please refresh the page to play again';
+    document.getElementById('message').innerHTML = 'The other player has left, please refresh the page!';
+    document.getElementById('board').classList.add('hidden');
 });
 
 socket.on('disconnect', () => {
@@ -118,7 +119,7 @@ function renderBoard() {
     let boardDiv = document.getElementById('board');
     let boardHTML = '';
     for (let i = 0; i < board.length; i++) {
-        boardHTML += `<div onclick="handleClick(${i})" class="w-32 h-32 text-center text-5xl text-white grid place-content-center border-2 ${board[i] === 'O' ? 'bg-green-500' : board[i] === 'X' ? 'bg-red-500' : ''}">${board[i]}</div>`;
+        boardHTML += `<div onclick="handleClick(${i})" class="w-32 h-32 text-center text-5xl text-white grid place-content-center border-2" style="background-color:${board[i] === 'O' ? '#456990' : board[i] === 'X' ? '#f45b69' : ''};">${board[i]}</div>`;
     }
     boardDiv.innerHTML = boardHTML;
 }

@@ -4,7 +4,7 @@ $(document).ready(function(){
 
         // set loading before fetching data
         $('#fh5co-gallery-list').html(`<div class="spinner-grow" role="status">
-        <span class="visually-hidden">Loading...</span>
+        <span class="visually-hidden" style="text-align: center;">Loading...</span>
       </div>`);
 
 

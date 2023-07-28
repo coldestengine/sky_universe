@@ -35,7 +35,7 @@
                     @endif
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">New to Sky Universe?</p>
-                    <a class="text-primary fw-bold ms-2" href="{{ route('register') }}">Create an account</a>
+                    <a class="text-primary fw-bold ms-2" href="{{ route('register') }}">Sign up</a>
                   </div>
                 </form>
               </div>

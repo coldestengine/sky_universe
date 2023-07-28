@@ -64,20 +64,13 @@
 	<script src="{{asset('assets/home/js/jquery.min.js')}}"></script>
 	<!-- jQuery Easing -->
 	<script src="{{asset('assets/home/js/jquery.easing.1.3.js')}}"></script>
-	<!-- Bootstrap -->
-	{{-- <script src="{{asset('assets/home/js/bootstrap.min.js')}}"></script> --}}
 	<!-- Waypoints -->
 	<script src="{{asset('assets/home/js/jquery.waypoints.min.js')}}"></script>
 	<!-- Carousel -->
 	<script src="{{asset('assets/home/js/owl.carousel.min.js')}}"></script>
-	<!-- countTo -->
-	{{-- <script src="{{asset('assets/home/js/jquery.countTo.js')}}"></script> --}}
 
 	<!-- Stellar -->
 	<script src="{{asset('assets/home/js/jquery.stellar.min.js')}}"></script>
-	<!-- Magnific Popup -->
-	{{-- <script src="{{asset('assets/home/js/jquery.magnific-popup.min.js')}}"></script>
-	<script src="{{asset('assets/home/js/magnific-popup-options.js')}}"></script> --}}
 
 	<!-- Main -->
 	<script src="{{asset('assets/home/js/main.js')}}"></script>

@@ -16,7 +16,7 @@
     </div>
     <div class="row row-bottom-padded-md">
         <div class="col-md-12">
-            <ul id="fh5co-gallery-list">
+            <ul id="fh5co-gallery-list" style="text-align: center;">
                 @php
                     $i = 1;
                 @endphp

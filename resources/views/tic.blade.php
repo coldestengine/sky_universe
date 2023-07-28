@@ -11,17 +11,16 @@
 </head>
 <body>
 
-    <div class="bg-gray-900 w-screen h-screen text-center grid place-content-center">
-        <h1 class="text-3xl text-white font-bold">Tic Tac Toe</h1>
-        <h1 class="text-sm text-white mb-3" id="message">message</h1>
-        <div class="bg-gray-800 gap-2 w-full h-full grid grid-rows-3 grid-cols-3" id="board">
+    <div class="w-screen h-screen text-center grid place-content-center" style="background-color: #114B5F">
+        <h1 class="text-3xl font-bold" style="color: #e4fde1">Tic Tac Toe</h1>
+        <h1 class="text-sm mb-3" id="message" style="color: #e4fde1">message</h1>
+        <div class="gap-2 w-full h-full grid grid-rows-3 grid-cols-3" id="board" style="background-color: #028090">
             <div class="w-32 h-32 text-center text-5xl text-white grid place-content-center border-2">X</div>
         </div>
         <input type="hidden" value="{{ $roomId }}" id="room">
         <button class="rounded-full text-white hidden" id="join-btn">Join Room (Enter Room ID)</button>
-        <form method="POST" action="{{ route('logout') }}">
+        <form class="mt-5" method="POST" action="{{ route('logout') }}">
             @csrf
-
             <x-dropdown-link class="bg-red-900 rounded-full text-center text-white" :href="route('logout')"
                     onclick="event.preventDefault();
                                 this.closest('form').submit();">
