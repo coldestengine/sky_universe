@@ -1,4 +1,7 @@
 @extends('layouts.bootstrap')
+@section('title')
+    Item
+@endsection
 @section('content')
 <div class="container mt-5 rounded-3 px-0 overflow-hidden">
     <div class="row">
@@ -48,7 +51,9 @@
                     <h4 class="fw-bold">{{ $wishlist }}</h4>
                 </div>
             </div>
+            <form action="{{ route('cart') }}" method="post">
         </div>
+            @csrf
         <div class="col-4 d-flex justify-content-end">
             <div class="card col-10 p-2">
                 <div class="card-body">
@@ -58,7 +63,8 @@
                   <h6 class="card-title text-blue fw-bold">Only {{ $total }} available <i class="bi bi-patch-check-fill"></i></h6>
                   <p class="fs-7 text-muted">Purchase in next 24 hours will come with a free gift from Sky Universe.</p>
                   <hr class="p-0">
-                  <button class="btn btn-dark col-12 mb-2" id="purchase-btn">Purchase Item</button>
+                  <input type="hidden" name="item_id" value="{{ $product->id }}">
+                  <button type="submit" class="btn btn-dark col-12 mb-2" id="purchase-btn">Purchase Item</button>
                   <button class="btn bg-pink col-12" data-item-id="{{ $product->id }}" id="cart-btn">Add to cart <i class="icon-shopping-cart"></i></button>
                   <div class="text-center mt-1">
                       <span id="cart-message" class="text-success col-12 text-center w-100"></span>
@@ -66,6 +72,7 @@
                 </div>
               </div>
         </div>
+        </form>
     </div>
 </div>
 @endsection

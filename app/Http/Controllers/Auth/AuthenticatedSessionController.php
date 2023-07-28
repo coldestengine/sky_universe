@@ -30,6 +30,13 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
+        if(Auth::user()->is_banned){
+            Auth::guard('web')->logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+            return redirect()->route('login')->with(['error' => 'Your account has been banned!']);
+        }
+
         if(Auth::user()->is_married){
             return redirect()->intended(RouteServiceProvider::HOME);
         } else {

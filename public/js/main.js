@@ -48,7 +48,6 @@ socket.on('turn', (data) => {
         success: function (response) {
             console.log(response);
             if (response == 1) {
-                // Redirect the user to another page when 'is_married' changes to 1
                 window.location.href = '/';
             }
         }
@@ -72,7 +71,7 @@ socket.on('move', (data) => {
 
 socket.on('winner', (data) => {
     // Code to handle when there's a winner.
-    document.getElementById('message').innerHTML = data + ' won';
+    document.getElementById('message').innerHTML = data + ' won, please refresh the page to play again';
 });
 
 socket.on('waiting', () =>{
@@ -88,7 +87,7 @@ socket.on('resetGame', (user) => {
     turn = 'X';
     board = ['', '', '', '', '', '', '', '', ''];
     renderBoard();
-    document.getElementById('message').innerHTML = 'Game reset! You are ' + user.symbol + ' it is X turn ';
+    document.getElementById('message').innerHTML = 'Game reset! another player has left the game, please refresh the page to play again';
 });
 
 socket.on('disconnect', () => {

@@ -19,6 +19,15 @@
         </div>
         <input type="hidden" value="{{ $roomId }}" id="room">
         <button class="rounded-full text-white hidden" id="join-btn">Join Room (Enter Room ID)</button>
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+
+            <x-dropdown-link class="bg-red-900 rounded-full text-center text-white" :href="route('logout')"
+                    onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                {{ __('Log Out') }}
+            </x-dropdown-link>
+        </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>

@@ -30,6 +30,9 @@
                   </div>
 
                   <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</button>
+                  @if(Session::has('error'))
+                    <p class="text-danger text-center">{{ Session::get('error') }}</p>
+                    @endif
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">New to Sky Universe?</p>
                     <a class="text-primary fw-bold ms-2" href="{{ route('register') }}">Create an account</a>

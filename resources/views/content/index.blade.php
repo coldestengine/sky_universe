@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
             <span>Our Collection</span>
-            <h2>Dress Catalogue</h2>
+            <h2>@if(Auth::user()->gender == 'Male')Suit Catalogue @else Dress Catalogue @endif</h2>
             <p>Dresses that Captivate: Unveiling the Collection</p>
             <select class="form-select" id="select-location">
                 <option value="All" selected>Location</option>

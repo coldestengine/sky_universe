@@ -19,10 +19,7 @@ return new class extends Migration
             $table->string('gender');
             $table->text('description');
             $table->string('price');
-            $table->string('qty_s');
-            $table->string('qty_m');
-            $table->string('qty_l');
-            $table->string('qty_xl');
+            $table->string('qty');
             $table->string('location');
             $table->string('image');
             $table->timestamps();

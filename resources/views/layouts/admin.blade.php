@@ -11,7 +11,31 @@
 
 <body>
   <!--  Body Wrapper -->
-  @yield('auth')
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+
+    <!-- Sidebar Start -->
+    @include('partials.sidebar_admin')
+    <!--  Sidebar End -->
+
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+
+      <!--  Header Start -->
+      @include('partials.header_admin')
+      <!--  Header End -->
+
+      <div class="container-fluid">
+        @yield('admin')
+
+        {{-- Footer --}}
+        <div class="py-6 px-6 text-center">
+          <small class="block">&copy; Sky Universe</small>
+          <p class="mb-0 fs-4">Adapted by Michael Kristianto</p>
+        </div>
+      </div>
+    </div>
+  </div>
   {{-- end content --}}
 
   <script src="{{ asset('assets/libs/jquery/dist/jquery.min.js') }}"></script>

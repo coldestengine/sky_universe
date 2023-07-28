@@ -9,8 +9,9 @@
                             @endphp
 
                             @if ($couple)
-                                <h1>{{ $couple->user1->name }} &amp; {{ $couple->user2->name }}</h1>
-                                <h2>You're getting married!</h2>
+                                <h2>Here's your wedding partner!</h2>
+                                <h1>@if(Auth::user()->gender == 'Male') {{ $couple->user2->name }} @else {{ $couple->user1->name }} @endif</h1>
+                                <img class="mb-2" src="{{ asset($couple->user1->profile_image) }}" style="border-radius: 50%">
                             @else
                                 <h1>No couple information found</h1>
                             @endif

@@ -25,6 +25,8 @@ return new class extends Migration
             $table->string('profile_image');
             $table->string('is_played')->default(0);
             $table->string('is_married')->default(0);
+            $table->string('is_admin')->default(0);
+            $table->string('is_banned')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
